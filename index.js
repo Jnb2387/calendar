@@ -1,26 +1,21 @@
 const fs = require('fs');
 const readline = require('readline');
-const {
-  google
-} = require('googleapis');
+const {google} = require('googleapis');
 const fetch = require("node-fetch");
 const moment = require("moment");
 const tz = require("moment-timezone")
-
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/calendar'];
 // The file token.json stores the user's access and refresh tokens, and is
 // created automatically when the authorization flow completes for the first
 // time.
 const TOKEN_PATH = 'token.json';
-
 // Load client secrets from a local file.
 fs.readFile('credentials.json', (err, content) => {
   if (err) return console.log('Error loading client secret file:', err);
   // Authorize a client with credentials, then call the Google Calendar API.
   authorize(JSON.parse(content), listEvents);
 });
-
 /**
  * Create an OAuth2 client with the given credentials, and then execute the
  * given callback function.
@@ -43,7 +38,6 @@ function authorize(credentials, callback) {
     callback(oAuth2Client);
   });
 }
-
 /**
  * Get and store new token after prompting for user authorization, and then
  * execute the given callback with the authorized OAuth2 client.
@@ -79,10 +73,9 @@ const d= moment().tz('America/Denver').format();
  * Lists the next 10 events on the user's primary calendar.
  * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
  */
-const url = `https://thestudiocorp.officernd.com/i/organizations/thestudiocorp/user/bookings/occurrences?start=${d}&end=2019-01-19T06:59:59.999Z&resourceId=5c192278166b1f0010f69abe`
-
+const url = `https://thestudiocorp.officernd.com/i/organizations/thestudiocorp/user/bookings/occurrences?start=${d}&end=2019-01-21T06:59:59.999Z&resourceId=5c192278166b1f0010f69abe`
 let newevents = [];
-let events = []
+let events_to_send = []
 const getData = async url => {
   try {
     const response = await fetch(url);
@@ -91,14 +84,10 @@ const getData = async url => {
     console.log(newevents.length)
     // var last_events = fs.readFileSync(`txt/baseline.json`)
     // fs.writeFileSync(`txt/baseline.json`, JSON.stringify(json))
- 
-
   } catch (error) {
     console.log(error);
   }
-
 };
-
 
 async function listEvents(auth) {
   const calendar = google.calendar({
@@ -107,7 +96,6 @@ async function listEvents(auth) {
   });
   await getData(url);
   //GET ALL EXISTING EVENTS IN GOOGLE ***** MAYBE MAKE THIS SEARCH FOR ONE MONTH ******
-  let google_events = [];
   calendar.events.list({
     calendarId: 'primary',
     timeMin: (new Date()).toISOString(),
@@ -122,9 +110,8 @@ async function listEvents(auth) {
       events.map((event, i) => {
         for (var j = 0; j < newevents.length; j++) {
           if (newevents[j].bookingId == event.description) {
-            // console.log('Matched ON bookingId: ', newevents[j].bookingId, event.description)
             if(moment(newevents[j].start.dateTime).tz('America/Denver').format() == event.start.dateTime && moment(newevents[j].end.dateTime).tz('America/Denver').format() == event.end.dateTime){
-              console.log("the times are the same also: ", moment(newevents[j].start.dateTime).tz('America/Denver').format(), event.start.dateTime)
+              console.log("the times are the same also: ", event.description, moment(newevents[j].start.dateTime).tz('America/Denver').format(), event.start.dateTime)
               newevents.splice([j],1)
             }
           } else {
@@ -132,38 +119,42 @@ async function listEvents(auth) {
           }
         }
       });
-      console.log(newevents.length)
+      newevents.map(function (value, i) {
+        events_to_send.push({
+          'summary': 'Busy',
+          'location': '4950 Washington St. Denver, CO 80216, Studio A',
+          'description': value.bookingId,
+          'start': {
+            'dateTime': moment(value.start.dateTime).tz('America/Denver').format(),
+            'timeZone': 'America/Denver'
+          },
+          'end': {
+            'dateTime': moment(value.end.dateTime).tz('America/Denver').format(),
+            'timeZone': 'America/Denver'
+          }
+        });
+      });
     } else {
       console.log('No Google Events Found')
     }
-    newevents.map(function (value, i) {
-      events.push({
-        'summary': 'Busy',
-        'location': 'Studio A',
-        'description': value.bookingId,
-        'start': {
-          'dateTime': moment(value.start.dateTime).tz('America/Denver').format(),
-          'timeZone': 'America/Denver'
-        },
-        'end': {
-          'dateTime': moment(value.end.dateTime).tz('America/Denver').format(),
-          'timeZone': 'America/Denver'
-        }
-      });
-    });
-    // console.log(events)
+    
     var request;
-    for (var j = 0; j < events.length; j++) {
+    for (var j = 0; j < events_to_send.length; j++) {
+      console.log('Sending New Booking:', events_to_send.description)
       request = function (resource) { // Function that returns a request.
         return calendar.events.insert({
           'calendarId': 'primary',
           'resource': resource
         });
-      }(events[j]);  // Bind to the current event.
+      }(events_to_send[j]);  // Bind to the current event.
     }
   });
 }
-
+//FIND UNHANDLED PROMISES
+// process.on('unhandledRejection', (reason, p) => {
+//   console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
+//   // application specific logging, throwing an error, or other logic here
+// })
 
 
 
@@ -188,11 +179,10 @@ async function listEvents(auth) {
 
 // var event = {
 //   'summary': 'Room Booked',
-//   'location': '',
+//   'location': '4950 Washington St. Denver, CO 80216',
 //   'description': 'Studio A is booked',
 //   'start': {
 //     'dateTime': starttimes[i],
-
 //     'timeZone': 'America/Denver',
 //   },
 //   'end': {
