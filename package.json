@@ -1,0 +1,20 @@
+{
+  "name": "sitecheck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "clean": "rm img/*.png & rm txt/*.txt"
+  },
+  "author": "Jeffrey Bradley",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "googleapis": "^36.0.0",
+    "moment": "^2.23.0",
+    "moment-timezone": "^0.5.23",
+    "node-fetch": "^2.3.0",
+    "readlines": "^0.2.0"
+  }
+}
