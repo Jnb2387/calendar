@@ -1,6 +1,6 @@
 const fs = require('fs');
 const readline = require('readline');
-const {google} = require('googleapis');
+const { google } = require('googleapis');
 const fetch = require("node-fetch");
 const moment = require("moment");
 const tz = require("moment-timezone")
@@ -68,12 +68,13 @@ function getAccessToken(oAuth2Client, callback) {
     });
   });
 }
-const d= moment().tz('America/Denver').format();
+const current_date = moment().tz('America/Denver').format();
+const one_month = moment().tz('America/Denver').add(5, 'days').format();
 /**
  * Lists the next 10 events on the user's primary calendar.
  * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
  */
-const url = `https://thestudiocorp.officernd.com/i/organizations/thestudiocorp/user/bookings/occurrences?start=${d}&end=2019-01-21T06:59:59.999Z&resourceId=5c192278166b1f0010f69abe`
+const url = `https://thestudiocorp.officernd.com/i/organizations/thestudiocorp/user/bookings/occurrences?start=${current_date}&end=${one_month}&resourceId=5c192278166b1f0010f69abe`
 let newevents = [];
 let events_to_send = []
 const getData = async url => {
@@ -81,13 +82,14 @@ const getData = async url => {
     const response = await fetch(url);
     const json = await response.json();
     newevents = json;
-    console.log(newevents.length)
+    console.log('Number of OfficeRnD Bookings:', newevents.length)
     // var last_events = fs.readFileSync(`txt/baseline.json`)
     // fs.writeFileSync(`txt/baseline.json`, JSON.stringify(json))
   } catch (error) {
     console.log(error);
   }
 };
+
 
 async function listEvents(auth) {
   const calendar = google.calendar({
@@ -109,13 +111,18 @@ async function listEvents(auth) {
       console.log('Number of Google Events: ', events.length);
       events.map((event, i) => {
         for (var j = 0; j < newevents.length; j++) {
-          if (newevents[j].bookingId == event.description) {
-            if(moment(newevents[j].start.dateTime).tz('America/Denver').format() == event.start.dateTime && moment(newevents[j].end.dateTime).tz('America/Denver').format() == event.end.dateTime){
-              console.log("the times are the same also: ", event.description, moment(newevents[j].start.dateTime).tz('America/Denver').format(), event.start.dateTime)
-              newevents.splice([j],1)
+          if (newevents[j].canceled == true) {
+            
+            console.log('Event has been canceled!', newevents[j].bookingId)
+            if (newevents[j].bookingId == event.description) {
+              deleteEvent(event.id)
             }
+            newevents.splice([j], 1)
           } else {
-            // console.log('not matches', newevents[j].bookingId)
+            if (newevents[j].bookingId == event.description && moment(newevents[j].start.dateTime).tz('America/Denver').format() == event.start.dateTime && moment(newevents[j].end.dateTime).tz('America/Denver').format() == event.end.dateTime) {
+                console.log("Booking Already Exists: ", event.description, moment(newevents[j].start.dateTime).tz('America/Denver').format('MMMM Do YYYY, h:mm:ss a'), 'Same AS ', moment(event.start.dateTime).tz('America/Denver').format('MMMM Do YYYY, h:mm:ss a'))
+                newevents.splice([j], 1)
+            }
           }
         }
       });
@@ -137,10 +144,10 @@ async function listEvents(auth) {
     } else {
       console.log('No Google Events Found')
     }
-    
+
     var request;
     for (var j = 0; j < events_to_send.length; j++) {
-      console.log('Sending New Booking:', events_to_send.description)
+      console.log('Sending New Booking:', events_to_send[j].description, moment(events_to_send[j].start.dateTime).tz('America/Denver').format('MMMM Do YYYY, h:mm:ss a'))
       request = function (resource) { // Function that returns a request.
         return calendar.events.insert({
           'calendarId': 'primary',
@@ -149,6 +156,21 @@ async function listEvents(auth) {
       }(events_to_send[j]);  // Bind to the current event.
     }
   });
+
+
+  function deleteEvent(eventId) {
+    var params = {
+      calendarId: 'primary',
+      eventId: eventId,
+    };
+    calendar.events.delete(params, function (err) {
+      if (err) {
+        console.log('The API returned an error: ' + err);
+        return;
+      }
+      console.log('Event deleted.', eventId);
+    });
+  }
 }
 //FIND UNHANDLED PROMISES
 // process.on('unhandledRejection', (reason, p) => {
