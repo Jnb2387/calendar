@@ -22,6 +22,7 @@ fs.readFile('credentials.json', (err, content) => {
  * @param {Object} credentials The authorization client credentials.
  * @param {function} callback The callback to call with the authorized client.
  */
+let calendar 
 function authorize(credentials, callback) {
   const {
     client_secret,
@@ -36,6 +37,10 @@ function authorize(credentials, callback) {
     if (err) return getAccessToken(oAuth2Client, callback);
     oAuth2Client.setCredentials(JSON.parse(token));
     callback(oAuth2Client);
+  });
+  calendar = google.calendar({
+    version: 'v3',
+    auth:oAuth2Client
   });
 }
 /**
@@ -92,10 +97,10 @@ const getData = async url => {
 
 
 async function listEvents(auth) {
-  const calendar = google.calendar({
-    version: 'v3',
-    auth
-  });
+  // const calendar = google.calendar({
+  //   version: 'v3',
+  //   auth
+  // });
   await getData(url);
   //GET ALL EXISTING EVENTS IN GOOGLE ***** MAYBE MAKE THIS SEARCH FOR ONE MONTH ******
   calendar.events.list({
@@ -107,47 +112,46 @@ async function listEvents(auth) {
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const events = res.data.items;
-    if (events.length) {
       console.log('Number of Google Events: ', events.length);
+      // isEquivalent(events, newevents)
       events.map((event, i) => {
+        console.log(i, event.summary,'ID:',  event.id,'Description:',event.description)
         for (var j = 0; j < newevents.length; j++) {
           if (newevents[j].canceled == true) {
-            
-            console.log('Event has been canceled!', newevents[j].bookingId)
-            if (newevents[j].bookingId == event.description) {
-              deleteEvent(event.id)
-            }
-            newevents.splice([j], 1)
-          } else {
-            if (newevents[j].bookingId == event.description && moment(newevents[j].start.dateTime).tz('America/Denver').format() == event.start.dateTime && moment(newevents[j].end.dateTime).tz('America/Denver').format() == event.end.dateTime) {
-                console.log("Booking Already Exists: ", event.description, moment(newevents[j].start.dateTime).tz('America/Denver').format('MMMM Do YYYY, h:mm:ss a'), 'Same AS ', moment(event.start.dateTime).tz('America/Denver').format('MMMM Do YYYY, h:mm:ss a'))
+            console.log('Canceled Event  @:', moment(newevents[j].start.dateTime).tz('America/Denver').format('MMMM Do YYYY, h:mm:ss a'))
+            // newevents.splice([j], 1)
+            deleteEvent(event.id)
+          }
+          // } else {
+            if (newevents[j].bookingId == event.id && moment(newevents[j].start.dateTime).tz('America/Denver').format() == event.start.dateTime && moment(newevents[j].end.dateTime).tz('America/Denver').format() == event.end.dateTime) {
+                console.log("Booking Already Exists: ", event.id, moment(newevents[j].start.dateTime).tz('America/Denver').format('MMMM Do YYYY, h:mm:ss a'), 'Same AS ', moment(event.start.dateTime).tz('America/Denver').format('MMMM Do YYYY, h:mm:ss a'))
                 newevents.splice([j], 1)
             }
-          }
+            // events_to_send.push({
+            //   'summary': 'Busy',
+            //   'id':newevents[j].bookingId,
+            //   'location': '4950 Washington St. Denver, CO 80216, Studio A',
+            //   'description': newevents[j].bookingId,
+            //   'start': {
+            //     'dateTime': moment(newevents[j].start.dateTime).tz('America/Denver').format(),
+            //     'timeZone': 'America/Denver'
+            //   },
+            //   'end': {
+            //     'dateTime': moment(newevents[j].end.dateTime).tz('America/Denver').format(),
+            //     'timeZone': 'America/Denver'
+            //   }
+            // });
+          // }
         }
       });
-      newevents.map(function (value, i) {
-        events_to_send.push({
-          'summary': 'Busy',
-          'location': '4950 Washington St. Denver, CO 80216, Studio A',
-          'description': value.bookingId,
-          'start': {
-            'dateTime': moment(value.start.dateTime).tz('America/Denver').format(),
-            'timeZone': 'America/Denver'
-          },
-          'end': {
-            'dateTime': moment(value.end.dateTime).tz('America/Denver').format(),
-            'timeZone': 'America/Denver'
-          }
-        });
-      });
-    } else {
-      console.log('No Google Events Found')
-    }
+      // newevents.map(function (value, i) {
+        
+     
+      // });
 
     var request;
     for (var j = 0; j < events_to_send.length; j++) {
-      console.log('Sending New Booking:', events_to_send[j].description, moment(events_to_send[j].start.dateTime).tz('America/Denver').format('MMMM Do YYYY, h:mm:ss a'))
+      console.log('Sending New Booking:', events_to_send[j].id, moment(events_to_send[j].start.dateTime).tz('America/Denver').format('MMMM Do YYYY, h:mm:ss a'))
       request = function (resource) { // Function that returns a request.
         return calendar.events.insert({
           'calendarId': 'primary',
@@ -158,43 +162,25 @@ async function listEvents(auth) {
   });
 
 
-  function deleteEvent(eventId) {
-    var params = {
-      calendarId: 'primary',
-      eventId: eventId,
-    };
-    calendar.events.delete(params, function (err) {
-      if (err) {
-        console.log('The API returned an error: ' + err);
-        return;
-      }
-      console.log('Event deleted.', eventId);
-    });
-  }
 }
+    function deleteEvent(eventId) {
+      var params = {
+        calendarId: 'primary',
+        eventId: eventId,
+      };
+      calendar.events.delete(params, function (err) {
+        if (err) {
+          console.log('The API returned an error: ' + err);
+          return;
+        }
+        console.log('Event deleted.', eventId);
+      });
+    }
 //FIND UNHANDLED PROMISES
 // process.on('unhandledRejection', (reason, p) => {
 //   console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
 //   // application specific logging, throwing an error, or other logic here
 // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
