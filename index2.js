@@ -24,7 +24,7 @@ const token = fs.readFileSync(TOKEN_PATH);
 oauth2Client.setCredentials(JSON.parse(token));
 
 const current_date = moment().tz('America/Denver').format();
-const one_month = moment().tz('America/Denver').add(1, 'days').format();
+const one_month = moment().tz('America/Denver').add(30, 'days').format();
 var calendarId='4mtf416s77rqed7gf81jukfa1g@group.calendar.google.com';
 
 var calendar = google.calendar('v3');
