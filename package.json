@@ -17,6 +17,7 @@
     "moment": "^2.23.0",
     "moment-timezone": "^0.5.23",
     "node-fetch": "^2.3.0",
-    "readlines": "^0.2.0"
+    "readlines": "^0.2.0",
+    "simple-node-logger": "^18.12.21"
   }
 }

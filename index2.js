@@ -4,20 +4,15 @@ const {
     google
 } = require('googleapis');
 var googleAuth = require('google-auth-library');
-var _ =require('lodash')
+var _ = require('lodash')
 const fetch = require("node-fetch");
 const moment = require("moment");
 const tz = require("moment-timezone");
-const current_date = moment().tz('America/Denver').format();
-const one_month = moment().tz('America/Denver').add(7, 'days').format();
 const path = require("path");
-const url = `https://thestudiocorp.officernd.com/i/organizations/thestudiocorp/user/bookings/occurrences?start=${current_date}&end=${one_month}&resourceId=5c192278166b1f0010f69abe`
-// const url = `https://app.officernd.com/i/organizations/jeffco-spatial/user/bookings/occurrences?start=${current_date}&end=${one_month}`
 
 // Load client secrets from a local file.
- 
-const googleSecrets = JSON.parse(fs.readFileSync(path.resolve(__dirname,'./credentials.json'))).installed
-var TOKEN_PATH = path.resolve(__dirname,'./token.json');
+const googleSecrets = JSON.parse(fs.readFileSync(path.resolve(__dirname, './credentials.json'))).installed
+var TOKEN_PATH = path.resolve(__dirname, './token.json');
 
 var oauth2Client = new googleAuth.OAuth2Client(
     googleSecrets.client_id,
@@ -28,42 +23,56 @@ var oauth2Client = new googleAuth.OAuth2Client(
 const token = fs.readFileSync(TOKEN_PATH);
 oauth2Client.setCredentials(JSON.parse(token));
 
+const current_date = moment().tz('America/Denver').format();
+const one_month = moment().tz('America/Denver').add(1, 'days').format();
+var calendarId='4mtf416s77rqed7gf81jukfa1g@group.calendar.google.com';
 
 var calendar = google.calendar('v3');
+const url = `https://thestudiocorp.officernd.com/i/organizations/thestudiocorp/user/bookings/occurrences?start=${current_date}&end=${one_month}&resourceId=5c192278166b1f0010f69abe`
+// const url = `https://app.officernd.com/i/organizations/jeffco-spatial/user/bookings/occurrences?start=${current_date}&end=${one_month}`
 let googleEvents;
 let officeEvents;
-var newBookings;
-var googleIds = [];
+
+const SimpleNodeLogger = require('simple-node-logger'),
+    opts = {
+        logFilePath: path.resolve(__dirname, './mylogfile.log'),
+        timestampFormat:'YYYY-MM-DD HH:mm:ss'
+    },
+log = SimpleNodeLogger.createSimpleLogger( opts );
+
 //GET THE GOOGLE EVENTS
 async function getGoogleEvents() {
-    await getOfficerndData(url)
-    //GET ALL EXISTING EVENTS IN GOOGLE ***** MAYBE MAKE THIS SEARCH FOR ONE MONTH ******
+
+    await getOfficerndData(url) //NOT SURE BUT WAIT UNTIL THE OFFICE EVENTS FUNCTION FINISHES
     calendar.events.list({
         auth: oauth2Client,
-        calendarId: 'sm3ok33ielv55ea2e367fbuin0@group.calendar.google.com',
-        timeMin: current_date,//(new Date()).toISOString(),
-        timeMax:one_month,
+        calendarId: calendarId,
+        timeMin: current_date, //(new Date()).toISOString(),
+        timeMax: one_month,
         maxResults: 50,
         singleEvents: true,
-        showDeleted:true,
+        showDeleted: true,
         orderBy: 'startTime',
     }, function (err, res) {
-        if (err) return console.log('The API returned an error: ' + err);
+        if (err) return log.info('The API returned an error: ' + err);
         googleEvents = res.data.items;
-        console.log('Number of Google Events:', googleEvents.length, '# of Cancelled',googleEvents.filter(function(item){return item.status === 'cancelled'}).length)
+        // console.log('Number of Google Events:', googleEvents.length, '# of Cancelled',googleEvents.filter(function(item){return item.status === 'cancelled'}).length)
         if (googleEvents.length) {
-            googleEvents.map((googleEvent, i) => {
-                console.log('Google', i, googleEvent.summary, 'ID:', googleEvent.id, '@', convertTime(googleEvent.start.dateTime,'MMMM Do YYYY, h:mm:ss a'), 'Status:', googleEvent.status)
-            });
+            // googleEvents.map((googleEvent, i) => {console.log('Google', i, googleEvent.summary, 'ID:', googleEvent.id, '@', convertTime(googleEvent.start.dateTime,'MMMM Do YYYY, h:mm:ss a'), 'Status:', googleEvent.status) });
             compareBookings()
         } else {
-            const ofevents = officeEvents.map(({bookingId: id, start, end, canceled}) => ({
+            const ofevents = officeEvents.map(({
+                bookingId: id,
+                start,
+                end,
+                status
+            }) => ({
                 id,
-                start:convertTime(start.dateTime),
-                end:convertTime(end.dateTime),
-                canceled
+                start: convertTime(start.dateTime),
+                end: convertTime(end.dateTime),
+                status
             }));
-            console.log('No upcoming Google Events found.');
+            // console.log('No upcoming Google Events found.');
             for (var j = 0; j < ofevents.length; j++) {
                 insertGoogleEvent(ofevents[j]);
             }
@@ -71,30 +80,37 @@ async function getGoogleEvents() {
     })
 }
 
-function compareBookings(){
-    // const ofevents = officeEvents.filter(function(item){
-    //     // console.log(item)
-    //     return item.canceled !== true
-    // })
-
-    const ofevents =officeEvents.map(({bookingId: id, start, end, status}) => ({
+function compareBookings() {
+    // LOOP THROUGH THE officeEVENTS ARRAY OF EVENTS AND MAKE A NEW ARRAY OF JUST THE bookingId, start, end, AND status(cancelled OR confirmed)
+    const ofevents = officeEvents.map(({
+        bookingId: id,
+        start,
+        end,
+        status
+    }) => ({
         id,
-        start:convertTime(start.dateTime),
-        end:convertTime(end.dateTime),
+        start: convertTime(start.dateTime),
+        end: convertTime(end.dateTime),
         status
     }));
-    const gcevents = googleEvents.map(({id, start, end, status}) => ({
+    // LOOP THROUGH THE googleEVENTS ARRAY OF EVENTS AND MAKE A NEW ARRAY OF JUST THE Id, start, end, AND status(cancelled OR confirmed)
+    const gcevents = googleEvents.map(({
         id,
-        start:convertTime(start.dateTime),
-        end:convertTime(end.dateTime),
+        start,
+        end,
+        status
+    }) => ({
+        id,
+        start: convertTime(start.dateTime),
+        end: convertTime(end.dateTime),
         status
     }));
-    var unique = _.differenceWith(ofevents,gcevents, _.isEqual);
+    var unique = _.differenceWith(ofevents, gcevents, _.isEqual);
     for (var j = 0; j < unique.length; j++) {
         insertGoogleEvent(unique[j]);
     }
 
-    return console.log('# of New Bookings',unique.length)
+    // return console.log('# of New Bookings',unique.length)
 }
 
 
@@ -102,25 +118,26 @@ function compareBookings(){
 async function getOfficerndData(url) {
     const response = await fetch(url);
     officeEvents = await response.json();
-    console.log('Total # of OfficeRnD Bookings:', officeEvents.length,'# of Cancelled',officeEvents.filter(function(item){return item.canceled === true}).length);
-    
+    // console.log('Total # of OfficeRnD Bookings:', officeEvents.length, '# of Cancelled', officeEvents.filter(function (item) {
+    //     return item.canceled === true
+    // }).length);
+
     officeEvents.map((event, i) => {
-        if(event.canceled===true){ event.status='cancelled'}//cancelGoogleEvents(event.bookingId,event.canceled),
-        else{ event.status='confirmed'}
-        console.log('Office', i, event.summary, 'ID:', event.bookingId, '@', convertTime(event.start.dateTime,'MMMM Do YYYY, h:mm:ss a'), 'Status:', event.status)
+        if (event.canceled === true) {
+            event.status = 'cancelled'
+        }
+        else {
+            event.status = 'confirmed'
+        }
+        // console.log('Office', i, event.summary, 'ID:', event.bookingId, '@', convertTime(event.start.dateTime,'MMMM Do YYYY, h:mm:ss a'), 'Status:', event.status)
     });
 
 };
 getGoogleEvents()
 
-
-
-
-
-
 function insertGoogleEvent(resource) { // Function that returns a request.
     var event_to_send = {
-        'summary': 'Busy',
+        'summary': 'Studio A Booked',
         'id': resource.id,
         'location': '4950 Washington St. Denver, CO 80216, Studio A',
         'description': resource.id,
@@ -131,54 +148,49 @@ function insertGoogleEvent(resource) { // Function that returns a request.
         'end': {
             'dateTime': moment(resource.end).tz('America/Denver').format(),
             'timeZone': 'America/Denver'
-        }
+        },
+        'attendees': [{
+            'email': 'jnb2387@gmail.com'
+        }, ],
+        'status': resource.status
     }
     calendar.events.insert({
         auth: oauth2Client,
-        calendarId: 'sm3ok33ielv55ea2e367fbuin0@group.calendar.google.com',
-        resource: event_to_send
+        calendarId: calendarId,
+        resource: event_to_send,
+        sendUpdates: 'all'
     }, function (err) {
-        if (err) return cancelGoogleEvents(event_to_send.id, resource.status)//console.log(err.message, event_to_send.id)
-        console.log('Event Inserted', event_to_send.id, '@', convertTime(event_to_send.start.dateTime,'MMMM Do YYYY, h:mm:ss a'))
+        if (err) {
+            patchGoogleEvents(event_to_send.id, event_to_send.status, event_to_send.start, event_to_send.end)
+        }else{
+
+            //console.log(err.message, event_to_send.id)
+           log.info(`Event Inserted ${event_to_send.id}, start ${convertTime(event_to_send.start.dateTime,'MMMM Do YYYY, h:mm:ss a')}, end ${convertTime(event_to_send.end.dateTime,'MMMM Do YYYY, h:mm:ss a')} status, ${event_to_send.status}`)
+            
+        }
+
     });
 };
 
-
-
-
-//CANCEL EVENT FUNCTION
-function cancelGoogleEvents(eventId, status) {
-
+//Patch EVENT FUNCTION
+function patchGoogleEvents(eventId, status,start,end) {
+    if(eventId ==='5c1be334f623420011c56dd7'){return }
     calendar.events.patch({
         auth: oauth2Client,
-        calendarId: 'sm3ok33ielv55ea2e367fbuin0@group.calendar.google.com',
+        calendarId: calendarId,
         eventId: eventId,
-        resource: {'status':status}
+        resource: {
+            'start': start,
+            'end':end,
+            'status': status
+        }
     }, function (err) {
-        if (err) return console.log('patch error', err.message)
-        console.log('Booking', eventId,' Updated to',status)
-    })
+        if (err) return log.info('patch error', err.message)
+        log.info(`Booking: ${eventId}, start ${convertTime(start.dateTime,'MMMM Do YYYY, h:mm:ss a')}, end ${convertTime(end.dateTime,'MMMM Do YYYY, h:mm:ss a')}, status ${status},`)
+
+})
 };
-
-
 
 var convertTime = function (convert, options) {
     return moment(convert).tz('America/Denver').format(options)
 }
-
-
-function deleteEvent(eventId) {
-    var params = {
-        auth: oauth2Client,
-        calendarId: 'sm3ok33ielv55ea2e367fbuin0@group.calendar.google.com',
-        eventId: eventId,
-    };
-    calendar.events.delete(params, function (err) {
-        if (err) {
-            console.log('The API returned an error: ' + err);
-            return;
-        }
-        console.log('Event deleted:', eventId);
-    });
-}
-// deleteEvent('onllvebmavsk73ftt9vvn84gm4')
