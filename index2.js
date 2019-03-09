@@ -4,7 +4,7 @@ const {
     google
 } = require('googleapis');
 var googleAuth = require('google-auth-library');
-var _ = require('lodash')
+var _ = require('lodash');
 const fetch = require("node-fetch");
 const moment = require("moment");
 const tz = require("moment-timezone");
@@ -24,7 +24,7 @@ const token = fs.readFileSync(TOKEN_PATH);
 oauth2Client.setCredentials(JSON.parse(token));
 
 const current_date = moment().tz('America/Denver').format();
-const one_month = moment().tz('America/Denver').add(30, 'days').format();
+const one_month = moment().tz('America/Denver').add(33, 'days').format();
 var calendarId='4mtf416s77rqed7gf81jukfa1g@group.calendar.google.com';
 
 var calendar = google.calendar('v3');
@@ -116,7 +116,12 @@ function compareBookings() {
 
 //GET THE OFFICE BOOKINGS
 async function getOfficerndData(url) {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+            headers: {
+               Cookie:'connect.sid=s%3AXhWbJfVE7_HKWJvZG0151KZXl86j3OKl.VyriWYJjIGE1DeJK4sIEGE%2BSjFD7MJcvAU4UNB9OI4c; path=/; domain=.thestudiocorp.officernd.com; Secure; HttpOnly; Expires=Sat, 16 Mar 2029 17:01:34 GMT;',
+               Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjNTJiZTQ4ZmI2MzM3MDAxMTEyZTc3YyIsImlhdCI6MTU0ODkyNjUzNiwiZXhwIjoxNTgwNDYyNTM2fQ.YD_WQJZ7tIGgtXtf3YcS-sQ8TJMshbOKUbZvq8Lxpsg'
+             }
+          });
     officeEvents = await response.json();
     // console.log('Total # of OfficeRnD Bookings:', officeEvents.length, '# of Cancelled', officeEvents.filter(function (item) {
     //     return item.canceled === true
@@ -150,7 +155,7 @@ function insertGoogleEvent(resource) { // Function that returns a request.
             'timeZone': 'America/Denver'
         },
         'attendees': [{
-            'email': 'jnb2387@gmail.com'
+            'email': 'bradleyhouse23@gmail.com'
         }, ],
         'status': resource.status
     }
@@ -169,7 +174,7 @@ function insertGoogleEvent(resource) { // Function that returns a request.
             
         }
 
-    });
+    })
 };
 
 //Patch EVENT FUNCTION
@@ -189,7 +194,7 @@ function patchGoogleEvents(eventId, status,start,end) {
         log.info(`Booking: ${eventId}, start ${convertTime(start.dateTime,'MMMM Do YYYY, h:mm:ss a')}, end ${convertTime(end.dateTime,'MMMM Do YYYY, h:mm:ss a')}, status ${status},`)
 
 })
-};
+}
 
 var convertTime = function (convert, options) {
     return moment(convert).tz('America/Denver').format(options)

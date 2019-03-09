@@ -10,6 +10,7 @@
   "author": "Jeffrey Bradley",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
     "dotenv": "^6.2.0",
     "google-auth-library": "^1.6.1",
     "googleapis": "^36.0.0",
