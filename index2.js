@@ -57,7 +57,7 @@ async function getGoogleEvents() {
         googleEvents = res.data.items;
         // console.log('Number of Google Events:', googleEvents.length, '# of Cancelled',googleEvents.filter(function(item){return item.status === 'cancelled'}).length)
         if (googleEvents.length) {
-            googleEvents.map((googleEvent, i) => {console.log('Google', i, googleEvent.summary, 'ID:', googleEvent.id, '@', convertTime(googleEvent.start.dateTime,'MMMM Do YYYY, h:mm:ss a'), 'Status:', googleEvent.status) });
+            // googleEvents.map((googleEvent, i) => {console.log('Google', i, googleEvent.summary, 'ID:', googleEvent.id, '@', convertTime(googleEvent.start.dateTime,'MMMM Do YYYY, h:mm:ss a'), 'Status:', googleEvent.status) });
             compareBookings()
         } else {
             const ofevents = officeEvents.map(({
@@ -115,7 +115,7 @@ function compareBookings() {
         insertGoogleEvent(unique[j]);
     }
 
-    return console.log('# of New Bookings', unique.length)
+    // return console.log('# of New Bookings', unique.length)
 }
 
 
@@ -141,7 +141,7 @@ async function getOfficerndData(url) {
             // if(event.summary===undefined){event.summary='Studio A Booked'}
             event.status = 'confirmed'
         }
-        console.log('Office', i, 'ID:', event.bookingId, event.team.name, '@', convertTime(event.start.dateTime, 'MMMM Do YYYY, h:mm:ss a'), 'Status:', event.status)
+        // console.log('Office', i, 'ID:', event.bookingId, event.team.name, '@', convertTime(event.start.dateTime, 'MMMM Do YYYY, h:mm:ss a'), 'Status:', event.status)
     });
 
 };
