@@ -1,1 +1,254 @@
 2019-03-09 10:21:12 INFO  Event Inserted 5c630de8033f8e0079bd2d1e, start April 10th 2019, 9:00:00 am, end April 10th 2019, 1:00:00 pm status, confirmed 
+2019-03-28 11:09:42 INFO  Booking: 5c96cf8e6f9ac200109a7c87, start March 30th 2019, 10:00:00 am, end March 30th 2019, 11:30:00 am, status confirmed, 
+2019-03-28 11:09:42 INFO  Booking: 5c97c3d46f9ac20010b3bdc7, start March 29th 2019, 2:30:00 pm, end March 29th 2019, 4:30:00 pm, status confirmed, 
+2019-03-28 11:09:42 INFO  Booking: 5c90345df0af0f024cc975a1, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:12:45 INFO  Booking: 5c90345df0af0f024cc975a1, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:15:31 INFO  Booking: 5c90345df0af0f024cc975a1, summary undefined, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:18:17 INFO  Booking: 5c608a68ad9d0d000f2f7c0b, summary Amber Cisneros-Vasquez, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status cancelled, 
+2019-03-28 11:18:17 INFO  Booking: 5c630de8033f8e0079bd2d1e, summary GSD Day, start April 10th 2019, 9:00:00 am, end April 10th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:18:17 INFO  Booking: 5c8b990a8325d9009b0775c9, summary Noah Berg creative shoot, start April 2nd 2019, 10:00:00 am, end April 2nd 2019, 10:30:00 am, status confirmed, 
+2019-03-28 11:18:17 INFO  Booking: 5c8cf0e9b21ca100aa565623, summary WAG Shoot, start April 6th 2019, 8:00:00 am, end April 6th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:18:17 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:18:17 INFO  Booking: 5c96cf8e6f9ac200109a7c87, summary Jessica Russell, start March 30th 2019, 10:00:00 am, end March 30th 2019, 11:30:00 am, status confirmed, 
+2019-03-28 11:18:18 INFO  Booking: 5c8cf119d4d6a900da77b3f9, summary WAG Shoot, start April 19th 2019, 8:00:00 am, end April 19th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:18:18 INFO  Booking: 5c9782c96f9ac20010ad71fd, summary Valuable Gem Photography, start April 14th 2019, 9:45:00 am, end April 14th 2019, 12:00:00 pm, status confirmed, 
+2019-03-28 11:18:18 INFO  Booking: 5c90345df0af0f024cc975a1, summary Head shot, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:18:18 INFO  Booking: 5c630e271e5c81001081aee1, summary GSD Day, start April 17th 2019, 9:00:00 am, end April 17th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:18:18 INFO  Booking: 5c86b75a352d9100aadf1706, summary Brad Herbst, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status cancelled, 
+2019-03-28 11:18:18 INFO  Booking: 5c6b0e5930034b0246dc8afb, summary Allyce & Zach Cisneros, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status cancelled, 
+2019-03-28 11:18:18 INFO  Booking: 5c93adfe03f1d4008b5b77fb, summary Laura Carson Photo, start March 31st 2019, 12:00:00 pm, end March 31st 2019, 3:00:00 pm, status confirmed, 
+2019-03-28 11:18:18 INFO  Booking: 5c7f0e8ac92937018ab80a76, summary Baby Shoot Out, start April 20th 2019, 12:00:00 pm, end April 20th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:18:18 INFO  Booking: 5c9950b8312c3a0010b5a43b, summary Amanda Rendon, start April 13th 2019, 1:00:00 pm, end April 13th 2019, 2:00:00 pm, status confirmed, 
+2019-03-28 11:18:19 INFO  Booking: 5c8b14f2c831e00090f1dc65, summary Elissa Woog Photography Mini Sessions, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status cancelled, 
+2019-03-28 11:18:19 INFO  Booking: 5c97c3d46f9ac20010b3bdc7, summary Elerie Family, start March 29th 2019, 2:30:00 pm, end March 29th 2019, 4:30:00 pm, status confirmed, 
+2019-03-28 11:18:19 INFO  Booking: 5c8cf0c2d4d6a900da77a789, summary WAG Shoot, start April 5th 2019, 8:00:00 am, end April 5th 2019, 4:00:00 pm, status cancelled, 
+2019-03-28 11:18:19 INFO  Booking: 5c9785a66f9ac20010adc410, summary Valuable Gem Photography, start April 21st 2019, 11:45:00 am, end April 21st 2019, 2:15:00 pm, status confirmed, 
+2019-03-28 11:18:20 INFO  Booking: 5c928f07c58ae70010b658ed, summary B12 Strategies Workshop, start April 18th 2019, 8:00:00 am, end April 18th 2019, 6:00:00 pm, status confirmed, 
+2019-03-28 11:23:25 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:23:32 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:24:29 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:24:57 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary Studio A Booked, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:28:17 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary Studio A Booked, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:28:17 INFO  Booking: 5c6b0e5930034b0246dc8afb, summary Studio A Booked, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status confirmed, 
+2019-03-28 11:28:17 INFO  Booking: 5c86b75a352d9100aadf1706, summary Studio A Booked, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:28:17 INFO  Booking: 5c8cf0c2d4d6a900da77a789, summary Studio A Booked, start April 5th 2019, 8:00:00 am, end April 5th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:28:17 INFO  Booking: 5c8b14f2c831e00090f1dc65, summary Studio A Booked, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status confirmed, 
+2019-03-28 11:28:18 INFO  Booking: 5c608a68ad9d0d000f2f7c0b, summary Studio A Booked, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status confirmed, 
+2019-03-28 11:28:40 INFO  Booking: 5c86b75a352d9100aadf1706, summary Studio A Booked, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:28:40 INFO  Booking: 5c608a68ad9d0d000f2f7c0b, summary Studio A Booked, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status confirmed, 
+2019-03-28 11:28:40 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary Studio A Booked, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:28:40 INFO  Booking: 5c8b14f2c831e00090f1dc65, summary Studio A Booked, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status confirmed, 
+2019-03-28 11:28:40 INFO  Booking: 5c6b0e5930034b0246dc8afb, summary Studio A Booked, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status confirmed, 
+2019-03-28 11:28:40 INFO  Booking: 5c8cf0c2d4d6a900da77a789, summary Studio A Booked, start April 5th 2019, 8:00:00 am, end April 5th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:29:02 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:29:02 INFO  Booking: 5c608a68ad9d0d000f2f7c0b, summary Amber Cisneros-Vasquez, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status confirmed, 
+2019-03-28 11:29:02 INFO  Booking: 5c6b0e5930034b0246dc8afb, summary Allyce & Zach Cisneros, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status confirmed, 
+2019-03-28 11:29:02 INFO  Booking: 5c8cf0c2d4d6a900da77a789, summary WAG Shoot, start April 5th 2019, 8:00:00 am, end April 5th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:29:03 INFO  Booking: 5c86b75a352d9100aadf1706, summary Brad Herbst, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:29:03 INFO  Booking: 5c8b14f2c831e00090f1dc65, summary Elissa Woog Photography Mini Sessions, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status confirmed, 
+2019-03-28 11:29:07 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:30:08 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:30:08 INFO  Booking: 5c630de8033f8e0079bd2d1e, summary Studio A Booked, start April 10th 2019, 9:00:00 am, end April 10th 2019, 1:00:00 pm, status undefined, 
+2019-03-28 11:30:08 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:30:08 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:30:08 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:30:08 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:30:08 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:30:08 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:30:08 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:30:08 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:30:08 INFO  Booking: 5c630e271e5c81001081aee1, summary Studio A Booked, start April 17th 2019, 9:00:00 am, end April 17th 2019, 1:00:00 pm, status undefined, 
+2019-03-28 11:30:08 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:30:08 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:30:08 INFO  Booking: 5c8b14f2c831e00090f1dc65, summary Studio A Booked, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status cancelled, 
+2019-03-28 11:30:08 INFO  Booking: 5c8b990a8325d9009b0775c9, summary Studio A Booked, start April 2nd 2019, 10:00:00 am, end April 2nd 2019, 10:30:00 am, status undefined, 
+2019-03-28 11:30:09 INFO  Booking: 5c90345df0af0f024cc975a1, summary Studio A Booked, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status undefined, 
+2019-03-28 11:30:09 INFO  Booking: 5c608a68ad9d0d000f2f7c0b, summary Studio A Booked, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status cancelled, 
+2019-03-28 11:30:09 INFO  Booking: 5c7f0e8ac92937018ab80a76, summary Studio A Booked, start April 20th 2019, 12:00:00 pm, end April 20th 2019, 5:00:00 pm, status undefined, 
+2019-03-28 11:30:09 INFO  Booking: 5c6b0e5930034b0246dc8afb, summary Studio A Booked, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status cancelled, 
+2019-03-28 11:30:10 INFO  Booking: 5c86b75a352d9100aadf1706, summary Studio A Booked, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status cancelled, 
+2019-03-28 11:30:35 INFO  Booking: 5c608a68ad9d0d000f2f7c0b, summary Amber Cisneros-Vasquez, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status confirmed, 
+2019-03-28 11:30:35 INFO  Booking: 5c630e271e5c81001081aee1, summary GSD Day, start April 17th 2019, 9:00:00 am, end April 17th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:30:35 INFO  Booking: 5c8b990a8325d9009b0775c9, summary Noah Berg creative shoot, start April 2nd 2019, 10:00:00 am, end April 2nd 2019, 10:30:00 am, status confirmed, 
+2019-03-28 11:30:36 INFO  Booking: 5c6b0e5930034b0246dc8afb, summary Allyce & Zach Cisneros, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status confirmed, 
+2019-03-28 11:30:36 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:30:36 INFO  Booking: 5c8b14f2c831e00090f1dc65, summary Elissa Woog Photography Mini Sessions, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status confirmed, 
+2019-03-28 11:30:36 INFO  Booking: 5c90345df0af0f024cc975a1, summary Head shot, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:30:36 INFO  Booking: 5c86b75a352d9100aadf1706, summary Brad Herbst, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:30:37 INFO  Booking: 5c7f0e8ac92937018ab80a76, summary Baby Shoot Out, start April 20th 2019, 12:00:00 pm, end April 20th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:30:37 INFO  Booking: 5c8cf0c2d4d6a900da77a789, summary WAG Shoot, start April 5th 2019, 8:00:00 am, end April 5th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:30:39 INFO  Booking: 5c630de8033f8e0079bd2d1e, summary GSD Day, start April 10th 2019, 9:00:00 am, end April 10th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:30:43 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:31:09 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:31:21 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary Studio A Booked, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status undefined, 
+2019-03-28 11:31:49 INFO  Booking: 5c9a6833e21b6001b3c9231a, summary Studio A Booked, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status undefined, 
+2019-03-28 11:32:29 INFO  Booking Patched: 5c9a6833e21b6001b3c9231a, summary Studio A Booked, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status undefined, 
+2019-03-28 11:32:53 INFO  Booking Patched: 5c9a6833e21b6001b3c9231a, summary Studio A Booked, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status undefined, 
+2019-03-28 11:33:11 INFO  Booking Patched: 5c9a6833e21b6001b3c9231a, summary Studio A Booked, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status undefined, 
+2019-03-28 11:33:16 INFO  Booking Patched: 5c9a6833e21b6001b3c9231a, summary Studio A Booked, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status undefined, 
+2019-03-28 11:37:47 INFO  Booking Patched: 5c608a68ad9d0d000f2f7c0b, summary Amber Cisneros-Vasquez, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status cancelled, 
+2019-03-28 11:37:47 INFO  Booking Patched: 5c8cf0c2d4d6a900da77a789, summary WAG Shoot, start April 5th 2019, 8:00:00 am, end April 5th 2019, 4:00:00 pm, status cancelled, 
+2019-03-28 11:37:47 INFO  Booking Patched: 5c9a6833e21b6001b3c9231a, summary Studio A Booked, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:37:47 INFO  Booking Patched: 5c86b75a352d9100aadf1706, summary Brad Herbst, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status cancelled, 
+2019-03-28 11:37:47 INFO  Booking Patched: 5c8b14f2c831e00090f1dc65, summary Elissa Woog Photography Mini Sessions, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status cancelled, 
+2019-03-28 11:37:48 INFO  Booking Patched: 5c6b0e5930034b0246dc8afb, summary Allyce & Zach Cisneros, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status cancelled, 
+2019-03-28 11:38:16 INFO  Booking Patched: 5c90345df0af0f024cc975a1, summary Head shot, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:39:53 INFO  Booking Patched: 5c9a6833e21b6001b3c9231a, summary undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:42:24 INFO  Booking Patched: 5c9a6833e21b6001b3c9231a, summary undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c8b14f2c831e00090f1dc65, member undefined, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status cancelled, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c8cf0c2d4d6a900da77a789, member undefined, start April 5th 2019, 8:00:00 am, end April 5th 2019, 4:00:00 pm, status cancelled, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c6b0e5930034b0246dc8afb, member undefined, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status cancelled, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c608a68ad9d0d000f2f7c0b, member undefined, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status cancelled, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c8cf0e9b21ca100aa565623, member undefined, start April 6th 2019, 8:00:00 am, end April 6th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c8b990a8325d9009b0775c9, member undefined, start April 2nd 2019, 10:00:00 am, end April 2nd 2019, 10:30:00 am, status confirmed, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c8cf119d4d6a900da77b3f9, member undefined, start April 19th 2019, 8:00:00 am, end April 19th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c90345df0af0f024cc975a1, member undefined, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c86b75a352d9100aadf1706, member undefined, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status cancelled, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c93adfe03f1d4008b5b77fb, member undefined, start March 31st 2019, 12:00:00 pm, end March 31st 2019, 3:00:00 pm, status confirmed, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c96cf8e6f9ac200109a7c87, member undefined, start March 30th 2019, 10:00:00 am, end March 30th 2019, 11:30:00 am, status confirmed, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c9782c96f9ac20010ad71fd, member undefined, start April 14th 2019, 9:45:00 am, end April 14th 2019, 12:00:00 pm, status confirmed, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c97c3d46f9ac20010b3bdc7, member undefined, start March 29th 2019, 2:30:00 pm, end March 29th 2019, 4:30:00 pm, status confirmed, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c9785a66f9ac20010adc410, member undefined, start April 21st 2019, 11:45:00 am, end April 21st 2019, 2:15:00 pm, status confirmed, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c9a6833e21b6001b3c9231a, member undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:51:02 INFO  Booking Patched: 5c9950b8312c3a0010b5a43b, member undefined, start April 13th 2019, 1:00:00 pm, end April 13th 2019, 2:00:00 pm, status confirmed, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c6b0e5930034b0246dc8afb, member undefined, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status cancelled, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c630e271e5c81001081aee1, member undefined, start April 17th 2019, 9:00:00 am, end April 17th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c608a68ad9d0d000f2f7c0b, member undefined, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status cancelled, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c7f0e8ac92937018ab80a76, member undefined, start April 20th 2019, 12:00:00 pm, end April 20th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c86b75a352d9100aadf1706, member undefined, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status cancelled, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c630de8033f8e0079bd2d1e, member undefined, start April 10th 2019, 9:00:00 am, end April 10th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c8b990a8325d9009b0775c9, member undefined, start April 2nd 2019, 10:00:00 am, end April 2nd 2019, 10:30:00 am, status confirmed, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c8b14f2c831e00090f1dc65, member undefined, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status cancelled, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c8cf0c2d4d6a900da77a789, member undefined, start April 5th 2019, 8:00:00 am, end April 5th 2019, 4:00:00 pm, status cancelled, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c90345df0af0f024cc975a1, member undefined, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c8cf119d4d6a900da77b3f9, member undefined, start April 19th 2019, 8:00:00 am, end April 19th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c928f07c58ae70010b658ed, member undefined, start April 18th 2019, 8:00:00 am, end April 18th 2019, 6:00:00 pm, status confirmed, 
+2019-03-28 11:56:50 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c9782c96f9ac20010ad71fd, member undefined, start April 14th 2019, 9:45:00 am, end April 14th 2019, 12:00:00 pm, status confirmed, 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c8cf0e9b21ca100aa565623, member undefined, start April 6th 2019, 8:00:00 am, end April 6th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:56:50 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c93adfe03f1d4008b5b77fb, member undefined, start March 31st 2019, 12:00:00 pm, end March 31st 2019, 3:00:00 pm, status confirmed, 
+2019-03-28 11:56:50 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:50 INFO  Booking Patched: 5c96cf8e6f9ac200109a7c87, member undefined, start March 30th 2019, 10:00:00 am, end March 30th 2019, 11:30:00 am, status confirmed, 
+2019-03-28 11:56:50 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  Booking Patched: 5c8cf0e9b21ca100aa565623, member undefined, start April 6th 2019, 8:00:00 am, end April 6th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  Booking Patched: 5c90345df0af0f024cc975a1, member undefined, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:56:54 INFO  Booking Patched: 5c9a6833e21b6001b3c9231a, member undefined, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:57:38 INFO  Booking Patched: 5c630e271e5c81001081aee1, member The Studio Corp, start April 17th 2019, 9:00:00 am, end April 17th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:57:38 INFO  Booking Patched: 5c9782c96f9ac20010ad71fd, member Valuable Gem Photography, start April 14th 2019, 9:45:00 am, end April 14th 2019, 12:00:00 pm, status confirmed, 
+2019-03-28 11:57:38 INFO  Booking Patched: 5c93adfe03f1d4008b5b77fb, member Laura Carson Photo, start March 31st 2019, 12:00:00 pm, end March 31st 2019, 3:00:00 pm, status confirmed, 
+2019-03-28 11:57:38 INFO  Booking Patched: 5c9785a66f9ac20010adc410, member Valuable Gem Photography, start April 21st 2019, 11:45:00 am, end April 21st 2019, 2:15:00 pm, status confirmed, 
+2019-03-28 11:57:38 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:57:38 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:57:38 INFO  Booking Patched: 5c86b75a352d9100aadf1706, member Brides, Bumps & Babies, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status cancelled, 
+2019-03-28 11:57:38 INFO  Booking Patched: 5c97c3d46f9ac20010b3bdc7, member Kim Denver Photography, start March 29th 2019, 2:30:00 pm, end March 29th 2019, 4:30:00 pm, status confirmed, 
+2019-03-28 11:57:39 INFO  Booking Patched: 5c8cf119d4d6a900da77b3f9, member Laura Carson Photo, start April 19th 2019, 8:00:00 am, end April 19th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:57:39 INFO  Booking Patched: 5c630de8033f8e0079bd2d1e, member The Studio Corp, start April 10th 2019, 9:00:00 am, end April 10th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:57:39 INFO  Booking Patched: 5c90345df0af0f024cc975a1, member Myndi Pressly Photography, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:57:39 INFO  Booking Patched: 5c8cf0c2d4d6a900da77a789, member Laura Carson Photo, start April 5th 2019, 8:00:00 am, end April 5th 2019, 4:00:00 pm, status cancelled, 
+2019-03-28 11:57:39 INFO  Booking Patched: 5c6b0e5930034b0246dc8afb, member Valuable Gem Photography, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status cancelled, 
+2019-03-28 11:57:40 INFO  Booking Patched: 5c8b14f2c831e00090f1dc65, member Elissa Woog Photography, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status cancelled, 
+2019-03-28 11:57:40 INFO  Booking Patched: 5c8b990a8325d9009b0775c9, member Walnut Street Photography, start April 2nd 2019, 10:00:00 am, end April 2nd 2019, 10:30:00 am, status confirmed, 
+2019-03-28 11:57:40 INFO  Booking Patched: 5c7f0e8ac92937018ab80a76, member The Studio Corp, start April 20th 2019, 12:00:00 pm, end April 20th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:57:40 INFO  Booking Patched: 5c608a68ad9d0d000f2f7c0b, member Valuable Gem Photography, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status cancelled, 
+2019-03-28 11:57:41 INFO  Booking Patched: 5c928f07c58ae70010b658ed, member The Studio Corp, start April 18th 2019, 8:00:00 am, end April 18th 2019, 6:00:00 pm, status confirmed, 
+2019-03-28 11:57:41 INFO  Booking Patched: 5c96cf8e6f9ac200109a7c87, member Valuable Gem Photography, start March 30th 2019, 10:00:00 am, end March 30th 2019, 11:30:00 am, status confirmed, 
+2019-03-28 11:57:43 INFO  Booking Patched: 5c8cf0e9b21ca100aa565623, member Laura Carson Photo, start April 6th 2019, 8:00:00 am, end April 6th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:57:47 INFO  Booking Patched: 5c7f0e8ac92937018ab80a76, member The Studio Corp, start April 20th 2019, 12:00:00 pm, end April 20th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:57:47 INFO  Booking Patched: 5c6b0e5930034b0246dc8afb, member Valuable Gem Photography, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status cancelled, 
+2019-03-28 11:57:47 INFO  Booking Patched: 5c630e271e5c81001081aee1, member The Studio Corp, start April 17th 2019, 9:00:00 am, end April 17th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:57:47 INFO  Booking Patched: 5c630de8033f8e0079bd2d1e, member The Studio Corp, start April 10th 2019, 9:00:00 am, end April 10th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:57:47 INFO  Booking Patched: 5c8b990a8325d9009b0775c9, member Walnut Street Photography, start April 2nd 2019, 10:00:00 am, end April 2nd 2019, 10:30:00 am, status confirmed, 
+2019-03-28 11:57:47 INFO  Booking Patched: 5c608a68ad9d0d000f2f7c0b, member Valuable Gem Photography, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status cancelled, 
+2019-03-28 11:57:47 INFO  Booking Patched: 5c86b75a352d9100aadf1706, member Brides, Bumps & Babies, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status cancelled, 
+2019-03-28 11:57:47 INFO  Booking Patched: 5c8cf0c2d4d6a900da77a789, member Laura Carson Photo, start April 5th 2019, 8:00:00 am, end April 5th 2019, 4:00:00 pm, status cancelled, 
+2019-03-28 11:57:47 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:57:47 INFO  Booking Patched: 5c8cf0e9b21ca100aa565623, member Laura Carson Photo, start April 6th 2019, 8:00:00 am, end April 6th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:57:47 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:57:47 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:57:47 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:57:47 INFO  Booking Patched: 5c8cf119d4d6a900da77b3f9, member Laura Carson Photo, start April 19th 2019, 8:00:00 am, end April 19th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:57:47 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:57:47 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:57:47 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:57:47 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:57:47 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:57:47 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:38 INFO  Booking Patched: 5c608a68ad9d0d000f2f7c0b, member Valuable Gem Photography, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status cancelled, 
+2019-03-28 11:59:38 INFO  Booking Patched: 5c630e271e5c81001081aee1, member The Studio Corp, start April 17th 2019, 9:00:00 am, end April 17th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:59:38 INFO  Booking Patched: 5c630de8033f8e0079bd2d1e, member The Studio Corp, start April 10th 2019, 9:00:00 am, end April 10th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:59:38 INFO  Booking Patched: 5c6b0e5930034b0246dc8afb, member Valuable Gem Photography, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status cancelled, 
+2019-03-28 11:59:38 INFO  Booking Patched: 5c86b75a352d9100aadf1706, member Brides, Bumps & Babies, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status cancelled, 
+2019-03-28 11:59:38 INFO  Booking Patched: 5c8b14f2c831e00090f1dc65, member Elissa Woog Photography, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status cancelled, 
+2019-03-28 11:59:38 INFO  Booking Patched: 5c7f0e8ac92937018ab80a76, member The Studio Corp, start April 20th 2019, 12:00:00 pm, end April 20th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:59:38 INFO  Booking Patched: 5c8cf0c2d4d6a900da77a789, member Laura Carson Photo, start April 5th 2019, 8:00:00 am, end April 5th 2019, 4:00:00 pm, status cancelled, 
+2019-03-28 11:59:38 INFO  Booking Patched: 5c8b990a8325d9009b0775c9, member Walnut Street Photography, start April 2nd 2019, 10:00:00 am, end April 2nd 2019, 10:30:00 am, status confirmed, 
+2019-03-28 11:59:38 INFO  Booking Patched: 5c8cf0e9b21ca100aa565623, member Laura Carson Photo, start April 6th 2019, 8:00:00 am, end April 6th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 11:59:39 INFO  Booking Patched: 5c90345df0af0f024cc975a1, member Myndi Pressly Photography, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:59:39 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:39 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:39 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:39 INFO  Booking Patched: 5c9782c96f9ac20010ad71fd, member Valuable Gem Photography, start April 14th 2019, 9:45:00 am, end April 14th 2019, 12:00:00 pm, status confirmed, 
+2019-03-28 11:59:39 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:39 INFO  Booking Patched: 5c93adfe03f1d4008b5b77fb, member Laura Carson Photo, start March 31st 2019, 12:00:00 pm, end March 31st 2019, 3:00:00 pm, status confirmed, 
+2019-03-28 11:59:39 INFO  Booking Patched: 5c9785a66f9ac20010adc410, member Valuable Gem Photography, start April 21st 2019, 11:45:00 am, end April 21st 2019, 2:15:00 pm, status confirmed, 
+2019-03-28 11:59:39 INFO  Booking Patched: 5c9a6833e21b6001b3c9231a, member 5280 Headshots, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:59:39 INFO  Booking Patched: 5c9950b8312c3a0010b5a43b, member Valuable Gem Photography, start April 13th 2019, 1:00:00 pm, end April 13th 2019, 2:00:00 pm, status confirmed, 
+2019-03-28 11:59:46 INFO  Booking Patched: 5c6b0e5930034b0246dc8afb, member Valuable Gem Photography, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status cancelled, 
+2019-03-28 11:59:46 INFO  Booking Patched: 5c7f0e8ac92937018ab80a76, member The Studio Corp, start April 20th 2019, 12:00:00 pm, end April 20th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:59:46 INFO  Booking Patched: 5c630de8033f8e0079bd2d1e, member The Studio Corp, start April 10th 2019, 9:00:00 am, end April 10th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:59:46 INFO  Booking Patched: 5c86b75a352d9100aadf1706, member Brides, Bumps & Babies, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status cancelled, 
+2019-03-28 11:59:46 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:46 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:46 INFO  Booking Patched: 5c630e271e5c81001081aee1, member The Studio Corp, start April 17th 2019, 9:00:00 am, end April 17th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 11:59:46 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:46 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:46 INFO  Booking Patched: 5c8b14f2c831e00090f1dc65, member Elissa Woog Photography, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status cancelled, 
+2019-03-28 11:59:46 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:46 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:46 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:46 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:46 INFO  Booking Patched: 5c93adfe03f1d4008b5b77fb, member Laura Carson Photo, start March 31st 2019, 12:00:00 pm, end March 31st 2019, 3:00:00 pm, status confirmed, 
+2019-03-28 11:59:46 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:47 INFO  patch errorRate Limit Exceeded 
+2019-03-28 11:59:47 INFO  Booking Patched: 5c96cf8e6f9ac200109a7c87, member Valuable Gem Photography, start March 30th 2019, 10:00:00 am, end March 30th 2019, 11:30:00 am, status confirmed, 
+2019-03-28 11:59:47 INFO  Booking Patched: 5c9a6833e21b6001b3c9231a, member 5280 Headshots, start April 29th 2019, 2:30:00 pm, end April 29th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 11:59:47 INFO  Booking Patched: 5c9950b8312c3a0010b5a43b, member Valuable Gem Photography, start April 13th 2019, 1:00:00 pm, end April 13th 2019, 2:00:00 pm, status confirmed, 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c630de8033f8e0079bd2d1e, member The Studio Corp, start April 10th 2019, 9:00:00 am, end April 10th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c86b75a352d9100aadf1706, member Brides, Bumps & Babies, start April 4th 2019, 12:00:00 pm, end April 4th 2019, 1:00:00 pm, status cancelled, 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c630e271e5c81001081aee1, member The Studio Corp, start April 17th 2019, 9:00:00 am, end April 17th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c6b0e5930034b0246dc8afb, member Valuable Gem Photography, start March 30th 2019, 4:30:00 pm, end March 30th 2019, 5:30:00 pm, status cancelled, 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c8b14f2c831e00090f1dc65, member Elissa Woog Photography, start April 13th 2019, 10:00:00 am, end April 13th 2019, 12:00:00 pm, status cancelled, 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c608a68ad9d0d000f2f7c0b, member Valuable Gem Photography, start April 18th 2019, 8:30:00 am, end April 18th 2019, 10:30:00 am, status cancelled, 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c8cf0c2d4d6a900da77a789, member Laura Carson Photo, start April 5th 2019, 8:00:00 am, end April 5th 2019, 4:00:00 pm, status cancelled, 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c90345df0af0f024cc975a1, member Myndi Pressly Photography, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c8cf0e9b21ca100aa565623, member Laura Carson Photo, start April 6th 2019, 8:00:00 am, end April 6th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c7f0e8ac92937018ab80a76, member The Studio Corp, start April 20th 2019, 12:00:00 pm, end April 20th 2019, 5:00:00 pm, status confirmed, 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c8cf119d4d6a900da77b3f9, member Laura Carson Photo, start April 19th 2019, 8:00:00 am, end April 19th 2019, 4:00:00 pm, status confirmed, 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c928f07c58ae70010b658ed, member The Studio Corp, start April 18th 2019, 8:00:00 am, end April 18th 2019, 6:00:00 pm, status confirmed, 
+2019-03-28 12:03:13 INFO  patch errorRate Limit Exceeded 
+2019-03-28 12:03:13 INFO  Booking Patched: 5c93adfe03f1d4008b5b77fb, member Laura Carson Photo, start March 31st 2019, 12:00:00 pm, end March 31st 2019, 3:00:00 pm, status confirmed, 
+2019-03-28 12:03:13 INFO  patch errorRate Limit Exceeded 
+2019-03-28 12:03:13 INFO  patch errorRate Limit Exceeded 
+2019-03-28 12:03:13 INFO  patch errorRate Limit Exceeded 
+2019-03-28 12:03:13 INFO  patch errorRate Limit Exceeded 
+2019-03-28 12:03:14 INFO  Booking Patched: 5c96cf8e6f9ac200109a7c87, member Valuable Gem Photography, start March 30th 2019, 10:00:00 am, end March 30th 2019, 11:30:00 am, status confirmed, 
+2019-03-28 12:03:14 INFO  Booking Patched: 5c8b990a8325d9009b0775c9, member Walnut Street Photography, start April 2nd 2019, 10:00:00 am, end April 2nd 2019, 10:30:00 am, status confirmed, 
+2019-03-28 12:06:25 INFO  Booking Patched: 5c90345df0af0f024cc975a1, summary Myndi Pressly Photography, start March 29th 2019, 12:00:00 pm, end March 29th 2019, 1:00:00 pm, status confirmed, 
